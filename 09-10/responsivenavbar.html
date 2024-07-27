@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        padding: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+      }
+
+      .hide {
+        display: none;
+      }
+      .hide a {
+        color: white;
+      }
+
+      .show {
+        display: none;
+      }
+
+      .navbar {
+        display: flex;
+      }
+
+      .show:hover .hide {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 80px;
+      }
+
+      @media  screen and (max-width : 767px) {
+        .sub-nav {
+            display: none;
+        } 
+
+        .show {
+            display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="2.png" alt="" height="50px" />
+      <div class="navbar">
+        <div class="sub-nav">
+          <a href="#">HOME 1</a>
+          <a href="#">HOME 2</a>
+          <a href="#">HOME 3</a>
+          <a href="#">HOME 4</a>
+          <a href="#">HOME 5</a>
+        </div>
+
+        <div class="show">
+          <a href="#">
+            <img src="whatsapp.jpg" alt="" height="20px">
+          </a>
+          <div class="hide">
+            <a href="#">HOME 1</a>
+            <a href="#">HOME 2</a>
+            <a href="#">HOME 3</a>
+            <a href="#">HOME 4</a>
+            <a href="#">HOME 5</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
