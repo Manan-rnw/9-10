@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #one {
+        position: relative;
+        left: 40%;
+        top: 250px;
+        width: 250px;
+      }
+
+      #two {
+        position: absolute;
+        left: 40%;
+        top: 250px;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="main">
+
+        <img src="../css/1.avif" alt="" id="one" />
+        <img src="../css/1.avif" alt="" id="two" />
+        
+    </div>
+    <br />
+    <br />
+    <button>CLICK ME</button>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#one").css({
+            top: "0",
+            left: "0",
+          });
+
+   
+
+          $("#two").css({
+            top: "0",
+            left: "280px",
+          });
+
+          $("body").css({
+            background: "black",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>col task</title>
+  </head>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+    .col30 {
+      width: 33.33%;
+      height: 160px;
+      background-color: thistle;
+    }
+    .text1{
+        width: 50px;
+    }
+  </style>
+
+  <body>
+    <div class="row">
+      <div class="col30">
+        <div>
+            <img src="../../09-10/css/whatsapp.jpg" alt="" class="text1">
+          <button id="fadein">FADE IN</button>
+          <button id="fadeout">FADE OUT</button>
+          <button id="fadetog">FADE TOG</button>
+          <button id="fadeto">FADE TO</button>
+        </div>
+      </div>
+      <div class="col30">
+        <div>
+            <img src="../../09-10/css/whatsapp.jpg" alt="" class="text2">
+          <button id="fadein">FADE IN</button>
+          <button id="fadeout">FADE OUT</button>
+          <button id="fadetog">FADE TOG</button>
+          <button id="fadeto">FADE TO</button>
+        </div>
+      </div>
+      <div class="col30">
+        <div>
+            <img src="../../09-10/css/whatsapp.jpg" alt="" class="text3">
+          <button id="fadein">FADE IN</button>
+          <button id="fadeout">FADE OUT</button>
+          <button id="fadetog">FADE TOG</button>
+          <button id="fadeto">FADE TO</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        //IT WILL WORK WITH BOTH FADE OUT
+        $("#fadeout").click(function () {
+          $(".text1").fadeOut(5000);
+        });
+
+        //IT WILL WORK WITH BOTH FADE IN
+
+        $("#fadein").click(function () {
+          $(".text1").fadeIn(5000);
+        });
+
+        //IT WILL WORK WITH BOTH FADE IN AND OUT
+        $("#fadetog").click(function () {
+          $(".text1").fadeToggle(1000);
+        });
+
+        // OPACITY WILL BE LESS
+        $("#fadeto").click(function () {
+          $(".text1").fadeTo("slow", 0.15);
+        });
+      });
+    </script>
+  </body>
+</html>
